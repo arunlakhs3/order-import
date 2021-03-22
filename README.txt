@@ -4,7 +4,7 @@ Tech stack:
 --------------------------------------------------------------------------------
 Front-end : AngularJS
 Back-end : Spring boot 2.2.6
-DB : Mongo 
+DB : Mongo 4.4
 Java version : 1.8
 
 
