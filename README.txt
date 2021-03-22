@@ -1,4 +1,4 @@
-Please follow the below instructions to run the services as containers in K8 cluster. 
+Please follow the below instructions to run the services as containers in Docker Cloud 
 
 Tech stack:
 --------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Inputs:
 Steps to run the application: 
 --------------------------------------------------------------------------------
 1. Checkout the project dir. The above mentioned docker related files will be shown. 
-2. In the server where the docker and K8 runs, issue the below command. Make sure to have target/OrderData.jar in the current working directory
+2. In the server where the docker runs, issue the below command. Make sure to have target/OrderData.jar in the current working directory
 	# docker-compose up
-	This will create the docker image and run as containers. 
+	This will create the docker image and upload to docker cloud and run as containers. 
 3. Hit the URL http://localhost:8995/ to access the Order Import UI.
