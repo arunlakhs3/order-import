@@ -1,0 +1,123 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head  lang="en">
+        <meta charset="utf-8"/>
+        <title>Order Data Import</title>
+        <script type="text/javascript" src="js-css/angular-js/angular.js"></script>
+        <script type="text/javascript" src="js-css/angular-js/angular-animate.js"></script>
+        <script type="text/javascript" src="js-css/angular-js/angular-route.js"></script>
+        <script type="text/javascript" src="js-css/angular-js/angular-touch.js"></script>
+        <script type="text/javascript" src="js-css/angular-js/jquery.js"></script>
+        <script type="text/javascript" src="js-css/angular-js/angular-clipboard.js"></script>
+        <script type="text/javascript" src="js-css/bootstrap/bootstrap.js"></script>
+        <script type="text/javascript" src="js-css/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
+        <script type="text/javascript" src="js-css/ui-grid/ui-grid.js"></script>
+        <script type="text/javascript" src="js-css/ui-grid/csv.js"></script>
+        <script type="text/javascript" src="js-css/ui-grid/ui-filter-unique.js"></script>
+        <script type="text/javascript" src="js-css/fileupload/ng-file-upload.js"></script>
+
+        <script type="text/javascript" src="js-css/dist/OrderModule.js"></script>
+        <script type="text/javascript" src="js-css/dist/IndexController.js"></script>
+
+        <script type="text/javascript" src="js-css/dist/OrderTableController.js"></script>
+
+
+        <link rel="stylesheet" type='text/css' href="js-css/bootstrap/bootstrap.min.css"/>
+        <link rel="stylesheet" type='text/css' href="js-css/bootstrap/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" type='text/css' href="js-css/abn_tree/abn_tree.css"/>
+        <link rel="stylesheet" href="js-css/ui-grid/ui-grid.css">
+        <link rel="stylesheet" href="js-css/font-awesome-4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" type='text/css' href="js-css/dist/stylesheet.css"/>
+
+        <link rel="shortcut icon" type="image/png" href="images/favicon.ico?" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:400,500" rel="stylesheet" type='text/css'>
+    </head>
+    <body>
+        
+            <div id="darkLayer" class="loadingStyle" ng-style="{'display':loadingTemplate}" ng-init="loadingTemplate = ''; loadingText = 'Loading the page ....';">
+                <div class="container-fluid">
+                    <div class="row"><br/></div>
+                    <div class="row"><br/></div>
+                    <div class="row"><br/></div>
+                    <div class="row"><br/></div>
+                    <div class="row"><br/></div>
+                    <div class="row"><br/></div>
+                    <div class="row"><br/></div>
+                    <div class="row"><br/></div>
+                    <div class="row">
+                        <div class="col-md-12" align="center">
+                            <font color="red"><h2>{{loadingText}}</h2></font>
+                            <font color="red"><h3>Please do not refresh the page</h3></font>
+                            <font color="red"><i class="fa fa-spinner fa-pulse fa-3x"></i></font>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div ng-show="!(isLoading)" ng-controller="IndexController">
+                    <!-- Header Added -->
+                    <div class="row container-fluid">
+                        <div class="col-md-12 body">
+                            <div class="row">
+                                <div align="right" class="col-md-3">
+                                </div>
+                                <div align="center" class="col-md-6">
+                                    <h3><font color="white">Order Data Import</font></h3>
+                                </div>
+                                <div align="right" class="col-md-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Body Added -->
+                    <div class="container-fluid row" style="font-size: 21px">
+                        <div>
+                            <div class="row" style="padding-left: 4px;">
+                                <div class="col-md-6">
+                                    <div>
+                                        <h1>Upload the CSV file for Data import</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                </div>
+                                <div class="col-md-9" >
+                                    <input type="file" ngf-select ng-model="importedFile" name="file" accept="*/*">
+                                    <div class="row"></div>
+                                    <br/>
+                                    <button class="btn btn-default" ng-click="importData(importedFile)" style="font-size: 21px">Import</button>
+                                </div>
+                            </div>
+                            <br/>
+                            
+                            <div ng-if="isDataPopulated">
+                                <div class="row" style="align-content: center" >
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <label>ORDER DATA TABLE</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-10">
+                                        <div style="font: normal 15px 'Cabin Condensed', sans-serif;" ui-grid="gridOptions" ui-grid-auto-resize ui-grid-selection ui-grid-pagination ui-grid-grouping ui-grid-resize-columns ui-grid-exporter  style="height: 300px;font: normal 20px 'Cabin Condensed', sans-serif;"></div>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                </div>
+                                <br/>
+                                <br/>
+                                <br/>
+                                
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

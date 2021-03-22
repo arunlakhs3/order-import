@@ -1,0 +1,148 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    overflow-x: hidden;
+    max-width: 105%;
+}
+
+a:link,a:visited{ 
+    color:  #ffffff;
+    cursor: auto;
+}
+
+.style-1 {
+    color: white;
+}
+
+.body {
+
+    padding: 5px;
+    overflow-x: hidden; /* For Opera */
+    max-width: 100%;
+    background-color: #000000;
+    overflow:hidden;
+    -webkit-box-shadow:
+        inset #C0C0C0 0 0 0 1px;
+    -moz-box-shadow:
+        inset #C0C0C0 0 0 0 1px;
+    box-shadow:
+        inset #C0C0C0 0 0 0 1px;
+
+}
+
+.uib-tab a {
+    background:#ECF9FE;
+    font-weight: bold;
+}
+
+.loadingStyle
+{
+    font-family: 'Play', sans-serif;
+    background:rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.logoutStyle
+{
+    font-family: 'Play', sans-serif;
+    background:rgba(170,170,170,0.5);
+    background-color: rgba(170,170,170,0.5);
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.logoutInner
+{
+    font-family: 'Play', sans-serif;
+    background:rgba(13, 13, 13,0.5);
+    background-color: rgba(13, 13, 13,0.5);
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.tooltip-inner {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 350px; 
+}
+
+.tooltips {
+    width:400px;
+}
+
+.selectionLabel {
+    font: normal 14px 'Inconsolata'  !important;
+}
+
+.loadingLabel {
+    font: normal 20px 'Inconsolata' !important;
+}
+
+.linkFontSize {
+    font-size: 24px;
+}
+
+.gridStyle {
+    width: 100%;
+    height: 100%; !important;
+}
+
+.gridStyleReport{
+    width: 100% !important;
+    height: 400px;
+}
+
+.right {
+    border-right: 1px solid #ccc;
+}
+
+.left {
+    border-left: 1px solid #ccc;
+}
+
+.row.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+abbr[title] {
+    cursor: none;
+    border-bottom: white
+}
+
+abbr[title], acronym[title] {
+    text-decoration: none
+}

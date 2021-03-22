@@ -1,0 +1,18 @@
+version: "3"
+services:
+  orderimport:
+    container_name: orderimport
+    restart: always
+    build: .
+    ports:
+      - "8995:8995"
+    links:
+      - mongo
+  mongo:
+    container_name: mongodb
+    image: mongo
+    hostname: "mongodb"
+    volumes:
+      - /app/:/data/mongodb
+    ports:
+      - "27017:27017"
