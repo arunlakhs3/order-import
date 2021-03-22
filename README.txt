@@ -23,5 +23,5 @@ Steps to run the application:
 2. In the server where the docker and K8 runs, issue the below command.
 	# docker-compose up
 	This will create the docker image and run as containers. 
-3. Hit the URL http://localhost:8085/ to access the Order Import UI.
+3. Hit the URL http://localhost:8995/ to access the Order Import UI.
 	
