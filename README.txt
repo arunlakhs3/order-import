@@ -19,7 +19,7 @@ Inputs:
 
 Steps to run the application: 
 --------------------------------------------------------------------------------
-1. Checkout the project dir. The above mentioned docker related files will be shown. 
+1. Clone the repo order-import from gitHub. The above mentioned docker related files will be shown. 
 2. In the server where the docker runs, issue the below command. Make sure to have target/OrderData.jar in the current working directory
 	# docker-compose up
 	This will create the docker image and upload to docker cloud and run as containers. 
